@@ -1,14 +1,20 @@
 # Yeehan’s comments
 
-1. Set up mac settings
+1. Change to bash
 ```bash
-cd dotfiles && source .macos ; exit;
-
+chsh -s /bin/zsh
 ```
+
 2. Set up git settings
 ```bash
 cd dotfiles
 ./install.sh ~
+```
+
+3. Set up mac settings
+```bash
+cd dotfiles && source .macos ; exit;
+
 ```
 
 

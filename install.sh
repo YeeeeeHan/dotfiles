@@ -5,30 +5,29 @@
 # And sets Sublime preferences
 ############################
 
-echo "hello"
-# if [ "$#" -ne 1 ]; then
-#     echo "Usage: install.sh <home_directory>"
-#     exit 1
-# fi
+if [ "$#" -ne 1 ]; then
+    echo "Usage: install.sh <home_directory>"
+    exit 1
+fi
 
-# homedir=$1
+homedir=$1
 
-# # dotfiles directory
-# dotfiledir=${homedir}/dotfiles
+# dotfiles directory
+dotfiledir=${homedir}/dotfiles
 
-# # list of files/folders to symlink in ${homedir}
-# files="bash_profile bashrc bash_prompt aliases private"
+# list of files/folders to symlink in ${homedir}
+files="bash_profile bashrc bash_prompt aliases gitconfig gitignore_global"
 
-# # change to the dotfiles directory
-# echo "Changing to the ${dotfiledir} directory"
-# cd ${dotfiledir}
-# echo "...done"
+# change to the dotfiles directory
+echo "Changing to the ${dotfiledir} directory"
+cd ${dotfiledir}
+echo "...done"
 
-# # create symlinks (will overwrite old dotfiles)
-# for file in ${files}; do
-#     echo "Creating symlink to $file in home directory."
-#     ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
-# done
+# create symlinks (will overwrite old dotfiles)
+for file in ${files}; do
+    echo "Creating symlink to $file in home directory."
+    ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
+done
 
 # # Download Git Auto-Completion
 # curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" > ${homedir}/.git-completion.bash

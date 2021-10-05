@@ -1,0 +1,12 @@
+*~
+# Mac misc
+.DS_Store
+
+# Jetbrains
+.idea/
+
+# dependencies
+/node_modules
+
+# Jupyter notebook
+.ipynb_checkpoints
