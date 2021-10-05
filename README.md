@@ -1,3 +1,24 @@
+# Yeehan’s comments
+
+1. Set up mac settings
+```bash
+cd dotfiles && source .macos ; exit;
+
+```
+2. Set up git settings
+```bash
+cd dotfiles
+./install.sh ~
+```
+
+
+
+
+
+
+
+
+
 # Mathias’s dotfiles
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
