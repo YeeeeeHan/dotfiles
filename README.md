@@ -68,3 +68,15 @@
    ```bash
    git remote set-url origin git@github.com:username/your-repository.git
    ```
+
+## Setting up Mac system preferences
+
+### Keyboard shortcuts
+
+Disable command Q for quit
+
+- On the left pane, find Accessibility. Now on the right pane enable Invert colors and then click on the shortcut box to reassign the shortcut to Cmd+Q.
+
+Keyboard repeat - fast
+
+delay until repeat - short
