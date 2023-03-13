@@ -80,3 +80,9 @@ Disable command Q for quit
 Keyboard repeat - fast
 
 delay until repeat - short
+
+## Brew installs
+
+```
+brew install clang-format // Formating for vscode extension - vscode-proto3
+```
