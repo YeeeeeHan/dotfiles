@@ -82,7 +82,6 @@ plugins=(
   macos
   zsh-autosuggestions
   zsh-syntax-highlighting
-  zsh-shift-select
   )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,19 +113,18 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# Set PATH, MANPATH, etc., for Homebrew.
-export PATH="/usr/local/bin:$PATH"
+# == Path, Homebrew ==
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Golang related
+# == Golang related ==
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$GOPATH/bin:$PATH
 
 export GOROOT=$(brew --prefix golang)/libexec
-export PATH=$PATH:$GOROOT/bin
+export PATH=$GOROOT/bin:$PATH
 
-# Nodejs Related
-source $(brew --prefix nvm)/nvm.sh
+# == Nodejs related == 
+# source $(brew --prefix nvm)/nvm.sh
 
 # == Custom Aliases ==
 # Print each PATH entry on a separate line
@@ -137,13 +135,9 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias localip="ipconfig getifaddr en0"
 alias publicip="curl ifconfig.me"
 # Cd to the highlighted folder in finder
-alias cdpfs="cd $(pfs)"
+# alias cdpfs="cd $(pfs)"
 # VSCode open the highlighted folder in vscode
 alias codepfs="pfs | xargs -I % code \"%\""
-
-# == XY Aliases ==
-alias xy-docker-compose="docker-compose -f docker-compose.yml"
-alias p-docker-compose="docker-compose -f docker-compose.platform.yml -p platform" 
 
 # == Arrow key search ==
 bindkey "^[[1;2C" forward-word

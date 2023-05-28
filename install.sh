@@ -1,9 +1,19 @@
-#!/usr/bin/env bash
-############################
-# This script creates symlinks from the home directory to any desired dotfiles in ${homedir}/dotfiles
-# And also installs Homebrew Packages
-# And sets Sublime preferences
-############################
+#!/usr/bin/env zsh
+
+# This script first installs applications 
+# and then creates symlinks from the home directory to any desired dotfiles in ${homedir}/dotfiles
+
+###############################################################################
+# Run scripts to install applications                                         #
+###############################################################################
+
+# # Run the Oh-my-zsh Script
+cd ~/dotfiles
+./scripts/ohmyzsh.sh
+
+###############################################################################
+# Symlinks                                                                    #
+###############################################################################
 
 if [ "$#" -ne 1 ]; then
     echo "Usage: install.sh <home_directory>"
@@ -12,28 +22,22 @@ fi
 
 homedir=$1
 
-# dotfiles directory
-dotfiledir=${homedir}/dotfiles
+# dotfiles symlink_folder directory
+dotfile_symlink_dir=${homedir}/dotfiles/symlink_folder
 
 # list of files/folders to symlink in ${homedir}
-files=""
+files=(zshrc bash_profile bashrc bash_prompt gitconfig gitignore_global)
 
 # change to the dotfiles directory
-echo "Changing to the ${dotfiledir} directory"
-cd ${dotfiledir}
-echo "...done"
+echo "Changing to the ${dotfile_symlink_dir} directory"
+cd ${dotfile_symlink_dir}
+echo "@@@@@@@@@@@@@@@...done"
 
 # create symlinks (will overwrite old dotfiles)
 for file in ${files}; do
+    echo ${file}
     echo "Creating symlink to $file in home directory."
-    ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
+    ln -sf ${dotfile_symlink_dir}/.${file} ${homedir}/.${file}
 done
 
-# # Download Git Auto-Completion
-# curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" > ${homedir}/.git-completion.bash
-
-# # Run the Homebrew Script
-# ./brew.sh
-
-# # Run the Sublime Script
-# ./sublime.sh
+source ~/.zshrc

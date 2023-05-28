@@ -16,6 +16,14 @@ Symlinks to ~ directory
 cd ~/dotfiles && ./install.sh ~
 ```
 
+open new terminal
+
+install brew
+
+```bash
+cd ~/dotfiles && ./scripts/brew.sh
+```
+
 Trigger macos settings
 
 ```bash
