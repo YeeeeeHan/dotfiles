@@ -1,5 +1,13 @@
 # Yeehan’s comments
 
+##
+
+```bash
+xcode-select --install
+
+git clone https://github.com//YeeeeeHan/dotfiles
+```
+
 ## Setting up environment
 
 1. Change to bash
