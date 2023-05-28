@@ -50,19 +50,6 @@ cd ~/dotfiles && ./.macos
    cd dotfiles && source .macos ; exit;
    ```
 
-## Setting up NVM
-
-1. Install nvm
-
-   ```bash
-   brew install nvm
-   ```
-
-2. Add nvm to shell profile (~/.bash_profile), making nvm available everytime you open a new terminal window
-   ```bash
-   source $(brew --prefix nvm)/nvm.sh
-   ```
-
 ## Setting up SSH keys
 
 1. See if existing SSH keys are present
@@ -99,20 +86,21 @@ cd ~/dotfiles && ./.macos
    git remote set-url origin git@github.com:username/your-repository.git
    ```
 
-## Setting up Mac system preferences
+## Setting up NVM
+
+1. Install nvm
+
+   ```bash
+   brew install nvm
+   ```
+
+2. Add nvm to shell profile (~/.bash_profile), making nvm available everytime you open a new terminal window
+   ```bash
+   source $(brew --prefix nvm)/nvm.sh
+   ```
 
 ### Keyboard shortcuts
 
 Disable command Q for quit
 
 - On the left pane, find Accessibility. Now on the right pane enable Invert colors and then click on the shortcut box to reassign the shortcut to Cmd+Q.
-
-Keyboard repeat - fast
-
-delay until repeat - short
-
-## Brew installs
-
-```
-brew install clang-format // Formating for vscode extension - vscode-proto3
-```
