@@ -4,8 +4,22 @@
 
 ```bash
 xcode-select --install
+```
 
-git clone https://github.com//YeeeeeHan/dotfiles
+```bash
+cd ~ && git clone https://github.com//YeeeeeHan/dotfiles
+```
+
+Symlinks to ~ directory
+
+```bash
+cd ~/dotfiles && ./install.sh ~
+```
+
+Trigger macos settings
+
+```bash
+cd ~/dotfiles && ./.macos
 ```
 
 ## Setting up environment

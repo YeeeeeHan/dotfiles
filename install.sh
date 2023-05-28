@@ -16,7 +16,7 @@ homedir=$1
 dotfiledir=${homedir}/dotfiles
 
 # list of files/folders to symlink in ${homedir}
-files="macos"
+files=""
 
 # change to the dotfiles directory
 echo "Changing to the ${dotfiledir} directory"
