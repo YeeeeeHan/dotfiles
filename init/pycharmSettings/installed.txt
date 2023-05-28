@@ -1,2 +1,0 @@
-com.jinsihou.react.snippets
-com.samdark.intellij-visual-studio-code-dark-plus
