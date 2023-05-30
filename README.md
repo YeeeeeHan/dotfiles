@@ -1,6 +1,6 @@
 # Yeehan’s comments
 
-##
+## Setting up environment
 
 ```bash
 xcode-select --install
@@ -27,28 +27,8 @@ cd ~/dotfiles && ./scripts/brew.sh
 Trigger macos settings
 
 ```bash
-cd ~/dotfiles && ./.macos
+cd ~/dotfiles && ./scripts/.macos
 ```
-
-## Setting up environment
-
-1. Change to bash
-
-   ```bash
-   chsh -s /bin/zsh
-   ```
-
-2. Set up git settings
-
-   ```bash
-   cd dotfiles
-   ./install.sh ~
-   ```
-
-3. Set up mac settings
-   ```bash
-   cd dotfiles && source .macos ; exit;
-   ```
 
 ## Setting up SSH keys
 
