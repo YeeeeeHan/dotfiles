@@ -123,6 +123,9 @@ export PATH=$GOPATH/bin:$PATH
 export GOROOT=$(brew --prefix golang)/libexec
 export PATH=$GOROOT/bin:$PATH
 
+# == Vscode related ==
+export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+
 # == Nodejs related == 
 # source $(brew --prefix nvm)/nvm.sh
 
@@ -135,7 +138,7 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias localip="ipconfig getifaddr en0"
 alias publicip="curl ifconfig.me"
 # Cd to the highlighted folder in finder
-# alias cdpfs="cd $(pfs)"
+alias cdpfs="cd $(pfs)"
 # VSCode open the highlighted folder in vscode
 alias codepfs="pfs | xargs -I % code \"%\""
 
