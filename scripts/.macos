@@ -58,6 +58,12 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 mkdir -p ~/Desktop/Screenshots
 defaults write com.apple.screencapture location -string "~/Desktop/Screenshots"
 
+# Screen shot shortcuts
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 21 "{enabled = 1; value = {parameters = (113, 12, 1048576); type = 'standard';};}"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 28 "{enabled = 1; value = {parameters = (50, 19, 1179648); type = 'standard';};}"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 29 "{enabled = 0; value = {parameters = (51, 20, 1441792); type = 'standard';};}"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 30 "{enabled = 1; value = {parameters = (51, 20, 1179648); type = 'standard';};}"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 31 "{enabled = 1; value = {parameters = (52, 21, 1179648); type = 'standard';};}"
 
 ###############################################################################
 # Finder                                                                      #
