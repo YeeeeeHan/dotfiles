@@ -32,11 +32,16 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 # Enable swipe gesture with three fingers
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 1
 
+# Enable swipe gesture with three fingers to reveal app expose
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0
+
 # Use scroll gesture with the command modifier key to zoom
-sudo defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-sudo defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 1048576
+# chmod +x ~/Library/Preferences/com.apple.universalaccess.plist
+# sudo chmod u+w ~/Library/Preferences/com.apple.universalaccess.plist
+# write com.apple.universalaccess closeViewScrollWheelToggle -int 0
+# write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 1048576
 # Follow the mouse focus while zoomed in
-defaults write com.apple.universalaccess closeViewPanningMode -int 0
+# write com.apple.universalaccess closeViewPanningMode -int 0
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -50,6 +55,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 ###############################################################################
 
 # Save screenshots to the desktop
+mkdir -p ~/Desktop/Screenshots
 defaults write com.apple.screencapture location -string "~/Desktop/Screenshots"
 
 
@@ -121,7 +127,7 @@ dockutil --no-restart --add "/Applications/Notion.app"
 killall Dock
 
 ###############################################################################
-# Application Settings                                                               #
+# Application Settings                                                        #
 ###############################################################################
 
 # Set up Spectacle
@@ -129,7 +135,7 @@ cp -r app_settings/Shortcuts.json ~/Library/Application\ Support/Spectacle/Short
 
 
 ###############################################################################
-# Terminal                                                     #
+# Terminal                                                                    #
 ###############################################################################
 
 # Only use UTF-8 in Terminal.app

@@ -10,6 +10,15 @@ xcode-select --install
 cd ~ && git clone https://github.com//YeeeeeHan/dotfiles
 ```
 
+install brew and applications (maybe have to run twice)
+
+```bash
+cd ~/dotfiles && ./scripts/brew.sh
+```
+
+open new terminal
+
+
 Symlinks to ~ directory
 
 ```bash
@@ -18,11 +27,6 @@ cd ~/dotfiles && ./install.sh ~
 
 open new terminal
 
-install brew
-
-```bash
-cd ~/dotfiles && ./scripts/brew.sh
-```
 
 Trigger macos settings
 
