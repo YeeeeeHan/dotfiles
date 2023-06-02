@@ -41,7 +41,7 @@ cd ~/dotfiles && ./scripts/.macos
 2. Generating new SSH keys
 
    ```bash
-   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ssh-keygen -t ed25519 -C "limyeehan@gmail.com"
    > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM: [Press enter]
    > Enter passphrase (empty for no passphrase): [Type a passphrase]
    > Enter same passphrase again: [Type passphrase again]
