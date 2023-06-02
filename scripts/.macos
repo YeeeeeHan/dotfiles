@@ -22,6 +22,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Play feedback when volume is changed
 defaults write -g "com.apple.sound.beep.feedback" -int 1
 
+# Alert sound volume
+defaults write .GlobalPreferences com.apple.sound.beep.volume -float 0.4326354
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
@@ -146,11 +149,13 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Google Chrome.app"
 dockutil --no-restart --add "/System/Applications/Calendar.app"
-dockutil --no-restart --add "/System/Applications/Utilities/Terminal.app"
 dockutil --no-restart --add "/System/Applications/System Settings.app"
 dockutil --no-restart --add "/System/Applications/Notes.app"
+dockutil --no-restart --add "/System/Applications/Reminders.app"
 dockutil --no-restart --add "/Applications/Spotify.app"
 dockutil --no-restart --add "/Applications/Telegram Desktop.app"
+dockutil --no-restart --add "/Applications/WhatsApp.app"
+dockutil --no-restart --add "/System/Applications/Utilities/Terminal.app"
 dockutil --no-restart --add "/Applications/Notion.app"
 dockutil --no-restart --add "/Applications/Visual Studio Code.app"
 
