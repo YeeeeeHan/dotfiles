@@ -141,7 +141,18 @@ alias publicip="curl ifconfig.me"
 alias cdpfs="cd $(pfs)"
 # VSCode open the highlighted folder in vscode
 alias codepfs="pfs | xargs -I % code \"%\""
-
+# Use fzf to search for filenames in a recursive manner
+alias fin="find . type f | fzf --preview='bat --color=always {}'"
+# use ripgrep to search for content in files
+# contentsearch() {
+    # rg "$1" .
+# }
+# using ripgrep combined with preview
+# find-in-file - usage: fif <searchTerm>
+fif() {
+  if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi
+  rg --files-with-matches --no-messages "$1" | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
+}
 # == Arrow key search ==
 bindkey "^[[1;2C" forward-word
 
