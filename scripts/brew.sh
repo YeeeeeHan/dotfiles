@@ -42,6 +42,7 @@ brew install htop
 brew install jq
 brew install lotyp/formulae/dockutil # For running dotfiles
 brew install node
+brew install ncdu
 brew install pip
 brew install ripgrep
 brew install tldr
