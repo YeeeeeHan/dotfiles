@@ -155,5 +155,5 @@ fif() {
 
 
 # == Arrow key search ==
-bindkey "^[[C" forward-word
+bindkey "${terminfo[kcuf1]}" forward-word
 bindkey "^[[1;2C" autosuggest-accept
