@@ -143,12 +143,10 @@ alias cdpfs="cd $(pfs)"
 alias codepfs="pfs | xargs -I % code \"%\""
 # Use fzf to search for filenames in a recursive manner
 alias fin="find . type f | fzf --preview='bat --color=always {}'"
-# use ripgrep to search for content in files
-# contentsearch() {
-    # rg "$1" .
-# }
-# using ripgrep combined with preview
-# find-in-file - usage: fif <searchTerm>
+# using ripgrep-all (rga) combined with fzf-tmux preview
+# implementation below makes use of "open" on macOS, which can be replaced by other commands if needed.
+# allows to search in PDFs, E-Books, Office documents, zip, tar.gz, etc. (see https://github.com/phiresky/ripgrep-all)
+# find-in-file - usage: fif <searchTerm> or fif "string with spaces" or fif "regex"
 fif() {
     if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi
     local file
