@@ -30,6 +30,16 @@ Trigger macos settings
 cd ~/dotfiles && ./scripts/.macos
 ```
 
+Further settings
+
+1. Loginitems
+   - DisplayLink Manager
+   - Spectacle
+   - MacMediaKeyForwarder
+2. Trackpad expose
+3. Command modifier zoom
+4. Keyboard input languages
+
 ## Setting up SSH keys
 
 1. See if existing SSH keys are present

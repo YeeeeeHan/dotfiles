@@ -3,7 +3,34 @@
 
 #!/usr/bin/env bash
 
-# ~/.macos — https://mths.be/macos
+CONTINUE=false
+
+echo "###############################################" $red
+echo "#        DO NOT RUN THIS SCRIPT BLINDLY       #" $red
+echo "#                                             #" $red
+echo "#              READ IT THOROUGHLY             #" $red
+echo "#         AND EDIT TO SUIT YOUR NEEDS         #" $red
+echo "###############################################" $red
+echo ""
+
+echo "Have you read through the script you're about to run and " $red
+echo "understood the changes it will make to your computer? (y/N)" $red
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  CONTINUE=true
+fi
+
+if ! $CONTINUE; then
+  exit 1
+fi
+
+if ! plutil -lint /Library/Preferences/com.apple.TimeMachine.plist >/dev/null ; then
+  echo "This script requires your terminal app to have Full Disk Access." $red
+  echo "Add this terminal to the Full Disk Access list in System Preferences > Security & Privacy, quit the app, and re-run this script."
+  echo ""
+  # shellcheck disable=SC2162
+  read -p "If you are certain this terminal has Full Disk Access, press [Enter] to continue."
+fi
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -46,13 +73,10 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGe
 # Follow the mouse focus while zoomed in
 # write com.apple.universalaccess closeViewPanningMode -int 0
 
-plutil -remove closeViewScrollWheelToggle ~/Library/Preferences/com.apple.universalaccess.plist
 plutil -insert closeViewScrollWheelToggle -bool YES ~/Library/Preferences/com.apple.universalaccess.plist
 
-plutil -remove closeViewScrollWheelModifiersInt ~/Library/Preferences/com.apple.universalaccess.plist
 plutil -insert closeViewScrollWheelModifiersInt -integer 1048576 ~/Library/Preferences/com.apple.universalaccess.plist
 
-plutil -remove closeViewPanningMode ~/Library/Preferences/com.apple.universalaccess.plist
 plutil -insert closeViewPanningMode -integer 0 ~/Library/Preferences/com.apple.universalaccess.plist
 
 # Disable press-and-hold for keys in favor of key repeat
@@ -113,6 +137,13 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Set the preferred view style of Finder to "List"
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+# New windows open to home directory
+defaults write com.apple.finder NewWindowTarget "PfHm"
+defaults write com.apple.finder NewWindowTargetPath "file:///Users/$(whoami)/"
+
+# Remove items from the Trash after 30 days
+defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 
 # Desktop snap to grid
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
