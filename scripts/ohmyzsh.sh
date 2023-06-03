@@ -8,3 +8,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/
 
 # Install zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+
+# Copy yeehan.zsh-theme to ~/.oh-my-zsh/themes
+cp ~/dotfiles/scripts/yeehan.zsh-theme ~/.oh-my-zsh/themes

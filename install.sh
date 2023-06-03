@@ -31,7 +31,7 @@ files=(zshrc bash_profile bashrc bash_prompt gitconfig gitignore_global)
 # change to the dotfiles directory
 echo "Changing to the ${dotfile_symlink_dir} directory"
 cd ${dotfile_symlink_dir}
-echo "@@@@@@@@@@@@@@@...done"
+echo "...done"
 
 # create symlinks (will overwrite old dotfiles)
 for file in ${files}; do
