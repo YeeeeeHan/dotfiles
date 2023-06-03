@@ -74,9 +74,7 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGe
 # write com.apple.universalaccess closeViewPanningMode -int 0
 
 plutil -insert closeViewScrollWheelToggle -bool YES ~/Library/Preferences/com.apple.universalaccess.plist
-
 plutil -insert closeViewScrollWheelModifiersInt -integer 1048576 ~/Library/Preferences/com.apple.universalaccess.plist
-
 plutil -insert closeViewPanningMode -integer 0 ~/Library/Preferences/com.apple.universalaccess.plist
 
 # Disable press-and-hold for keys in favor of key repeat
@@ -95,25 +93,30 @@ mkdir -p ~/Desktop/Screenshots
 defaults write com.apple.screencapture location -string "~/Desktop/Screenshots"
 
 # Screen shot shortcuts
-plutil -insert AppleSymbolicHotKeys.21.enabled -integer 1 ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.21.value.parameters -xml '<array><integer>113</integer><integer>12</integer><integer>1048576</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.21.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 21 "{enabled = 1; value = {parameters = (113, 12, 1048576); type = 'standard';};}"
+plutil -replace AppleSymbolicHotKeys.21.enabled -integer 1 ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.21.value.parameters -xml '<array><integer>113</integer><integer>12</integer><integer>1048576</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.21.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
-plutil -insert AppleSymbolicHotKeys.28.enabled -integer 1 ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.28.value.parameters -xml '<array><integer>50</integer><integer>19</integer><integer>1179648</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.28.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 28 "{enabled = 1; value = {parameters = (50, 19, 1179648); type = 'standard';};}"
+plutil -replace AppleSymbolicHotKeys.28.enabled -integer 1 ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.28.value.parameters -xml '<array><integer>50</integer><integer>19</integer><integer>1179648</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.28.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
-plutil -insert AppleSymbolicHotKeys.29.enabled -integer 0 ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.29.value.parameters -xml '<array><integer>51</integer><integer>20</integer><integer>1441792</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.29.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 29 "{enabled = 0; value = {parameters = (51, 20, 1441792); type = 'standard';};}"
+plutil -replace AppleSymbolicHotKeys.29.enabled -integer 0 ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.29.value.parameters -xml '<array><integer>51</integer><integer>20</integer><integer>1441792</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.29.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
-plutil -insert AppleSymbolicHotKeys.30.enabled -integer 1 ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.30.value.parameters -xml '<array><integer>51</integer><integer>20</integer><integer>1179648</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.30.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 30 "{enabled = 1; value = {parameters = (51, 20, 1179648); type = 'standard';};}"
+plutil -replace AppleSymbolicHotKeys.30.enabled -integer 1 ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.30.value.parameters -xml '<array><integer>51</integer><integer>20</integer><integer>1179648</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.30.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
-plutil -insert AppleSymbolicHotKeys.31.enabled -integer 1 ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.31.value.parameters -xml '<array><integer>52</integer><integer>21</integer><integer>1179648</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-plutil -insert AppleSymbolicHotKeys.31.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 31 "{enabled = 1; value = {parameters = (52, 21, 1179648); type = 'standard';};}"
+plutil -replace AppleSymbolicHotKeys.31.enabled -integer 1 ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.31.value.parameters -xml '<array><integer>52</integer><integer>21</integer><integer>1179648</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.31.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
 ###############################################################################
 # Finder                                                                      #
