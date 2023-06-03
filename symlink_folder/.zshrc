@@ -152,6 +152,8 @@ fif() {
     local file
     file="$(rga --max-count=1 --ignore-case --files-with-matches --no-messages "$@" | fzf-tmux +m --preview="rga --ignore-case --pretty --context 10 '"$@"' {}")" && open "$file"
 }
-# == Arrow key search ==
-bindkey "^[[1;2C" forward-word
 
+
+# == Arrow key search ==
+bindkey "^[[C" forward-word
+bindkey "^[[1;2C" autosuggest-accept
