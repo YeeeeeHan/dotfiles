@@ -13,11 +13,12 @@ brew install --cask displaylink
 brew install --cask discord
 brew install --cask docker
 brew install --cask google-chrome
-brew install --cask notion
-brew install --cask plex
 brew install --cask macmediakeyforwarder
 brew install --cask microsoft-excel
 brew install --cask microsoft-word
+brew install --cask notion
+brew install --cask openvpn-connect
+brew install --cask plex
 brew install --cask mongodb-compass
 brew install --cask redisinsight
 brew install --cask slack
