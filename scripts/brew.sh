@@ -8,6 +8,7 @@ brew upgrade
 
 # Install desktop applications
 brew install --cask binance
+brew install --cask brave-browser
 brew install --cask dbeaver-community
 brew install --cask displaylink
 brew install --cask discord
