@@ -114,8 +114,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 # == Path, Homebrew ==
-export BREW_BIN=$(brew --prefix)/bin/brew
-eval "$($BREW_BIN shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
+# eval "$(/usr/local/bin/brew shellenv)" # Intel mac
 
 # == Golang related ==
 export GOPATH=$HOME/go
