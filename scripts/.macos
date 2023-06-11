@@ -291,6 +291,13 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
 ###############################################################################
+# iCloud related                                                              #
+###############################################################################
+
+# Enable universal clipboard
+defaults write ~/Library/Preferences/com.apple.coreservices.useractivityd.plist ClipboardSharingEnabled 1
+
+###############################################################################
 # Home server                                                                 #
 ###############################################################################
 
