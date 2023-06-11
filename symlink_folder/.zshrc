@@ -114,7 +114,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 # == Path, Homebrew ==
-eval "$(/opt/homebrew/bin/brew shellenv)"
+export BREW_BIN=$(brew --prefix)/bin/brew
+eval "$($BREW_BIN shellenv)"
 
 # == Golang related ==
 export GOPATH=$HOME/go
@@ -127,7 +128,7 @@ export PATH=$GOROOT/bin:$PATH
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
 # == Nodejs related == 
-# source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix nvm)/nvm.sh
 
 # == Custom Aliases ==
 # Print each PATH entry on a separate line
@@ -152,7 +153,8 @@ fif() {
     local file
     file="$(rga --max-count=1 --ignore-case --files-with-matches --no-messages "$@" | fzf-tmux +m --preview="rga --ignore-case --pretty --context 10 '"$@"' {}")" && open "$file"
 }
-
+# Vscode shortcut that does not spawn multiple vscode in dock
+alias code='open -b com.microsoft.VSCode "$@"'
 
 # == Arrow key search ==
 bindkey "${terminfo[kcuf1]}" forward-word

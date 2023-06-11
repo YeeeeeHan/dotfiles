@@ -43,7 +43,6 @@ brew install go
 brew install htop
 brew install jq
 brew install lotyp/formulae/dockutil # For running dotfiles
-brew install node
 brew install ncdu
 brew install ripgrep
 brew install tldr
@@ -53,3 +52,8 @@ brew install tree
 brew install typescript
 brew install wget
 brew install yarn
+
+# Nodejs set up
+brew install nvm
+npm install -g npm # Update npm
+npm install -g pnpm # Install pnpm
