@@ -118,6 +118,12 @@ plutil -replace AppleSymbolicHotKeys.31.enabled -integer 1 ~/Library/Preferences
 plutil -replace AppleSymbolicHotKeys.31.value.parameters -xml '<array><integer>52</integer><integer>21</integer><integer>1179648</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 plutil -replace AppleSymbolicHotKeys.31.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
+# Remove input source shortcuts
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 "{enabled = 0; value = {parameters = (32, 49, 262144); type = 'standard';};}"
+plutil -replace AppleSymbolicHotKeys.60.enabled -integer 0 ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.60.value.parameters -xml '<array><integer>32</integer><integer>49</integer><integer>262144</integer></array>' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+plutil -replace AppleSymbolicHotKeys.60.value.type -string 'standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
