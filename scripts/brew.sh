@@ -8,6 +8,7 @@ brew upgrade
 
 # Install desktop applications
 brew install --cask betterdisplay
+brew install --cask bitwarden
 brew install --cask binance
 brew install --cask brave-browser
 brew install --cask dbeaver-community
