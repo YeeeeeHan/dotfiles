@@ -37,6 +37,7 @@ Further settings
    - Spectacle
    - MacMediaKeyForwarder
    - Betterdisplay
+   - Bitwarden
 2. Trackpad expose
 3. Install BitWarden
 
