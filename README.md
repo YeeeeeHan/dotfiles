@@ -36,9 +36,9 @@ Further settings
    - DisplayLink Manager
    - Spectacle
    - MacMediaKeyForwarder
+   - Betterdisplay
 2. Trackpad expose
-3. Command modifier zoom
-4. Keyboard input languages
+3. Install BitWarden
 
 ## Setting up SSH keys
 
