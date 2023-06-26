@@ -16,10 +16,12 @@ brew install --cask displaylink
 brew install --cask discord
 brew install --cask docker
 brew install --cask google-chrome
+brew install --cask logi-options-plus
 brew install --cask macmediakeyforwarder
 brew install --cask microsoft-excel
 brew install --cask microsoft-word
 brew install --cask notion
+brew install --cask obsidian
 brew install --cask openvpn-connect
 brew install --cask plex
 brew install --cask mongodb-compass
@@ -27,6 +29,8 @@ brew install --cask redisinsight
 brew install --cask slack
 brew install --cask spectacle
 brew install --cask spotify
+brew install --cask shortcutdetective
+brew install --cask syncthing
 brew install --cask tailscale
 brew install --cask telegram-desktop
 brew install --cask tradingview
@@ -46,7 +50,9 @@ brew install htop
 brew install jq
 brew install lotyp/formulae/dockutil # For running dotfiles
 brew install ncdu
+brew install mas
 brew install ripgrep
+brew install syncthing
 brew install tldr
 brew install tmux
 brew install trash
