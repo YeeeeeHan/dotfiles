@@ -39,7 +39,6 @@ Further settings
    - Betterdisplay
    - Bitwarden
 2. Trackpad expose
-3. Install BitWarden
 
 ## Setting up SSH keys
 

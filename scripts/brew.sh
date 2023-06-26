@@ -65,3 +65,7 @@ brew install yarn
 brew install nvm
 npm install -g npm # Update npm
 npm install -g pnpm # Install pnpm
+
+# Mas downloads
+mas install 1352778147 # Bitwarden
+mas install 425264550 # Blackmagic Disk Speed Test
