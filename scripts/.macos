@@ -205,6 +205,8 @@ dockutil --no-restart --add "/Applications/WhatsApp.app"
 dockutil --no-restart --add "/System/Applications/Utilities/Terminal.app"
 dockutil --no-restart --add "/Applications/Notion.app"
 dockutil --no-restart --add "/Applications/Visual Studio Code.app"
+dockutil --no-restart --add "/Applications/Bitwarden.app"
+dockutil --no-restart --add "/Applications/Obsidian.app"
 
 killall Dock
 
