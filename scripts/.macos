@@ -163,7 +163,7 @@ defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 killall Finder
 
 ###############################################################################
-# Menu, Dock, Dashboard, and hot corners                                            #
+# Menu, Dock, Dashboard, Spaces and hot corners                               #
 ###############################################################################
 
 # Remove Spotlight icon from menu
@@ -191,6 +191,9 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-bl-corner -int 3
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+# Enable switch spaces on app focus
+defaults write -g AppleSpacesSwitchOnActivate -bool true
+
 #!/bin/sh
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Brave Browser.app"
@@ -200,12 +203,13 @@ dockutil --no-restart --add "/System/Applications/System Settings.app"
 dockutil --no-restart --add "/System/Applications/Notes.app"
 dockutil --no-restart --add "/System/Applications/Reminders.app"
 dockutil --no-restart --add "/Applications/Spotify.app"
+dockutil --no-restart --add "/Applications/Discord.app"
 dockutil --no-restart --add "/Applications/Telegram Desktop.app"
 dockutil --no-restart --add "/Applications/WhatsApp.app"
+dockutil --no-restart --add "/System/Applications/Messages.app"
 dockutil --no-restart --add "/System/Applications/Utilities/Terminal.app"
 dockutil --no-restart --add "/Applications/Notion.app"
 dockutil --no-restart --add "/Applications/Visual Studio Code.app"
-dockutil --no-restart --add "/Applications/Bitwarden.app"
 dockutil --no-restart --add "/Applications/Obsidian.app"
 
 killall Dock
