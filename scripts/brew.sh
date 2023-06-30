@@ -70,3 +70,4 @@ npm install -g pnpm # Install pnpm
 mas install 1352778147 # Bitwarden
 mas install 425264550 # Blackmagic Disk Speed Test
 mas install 1437226581 # Horo timer
+mas install 1564031042 # Omnivore
