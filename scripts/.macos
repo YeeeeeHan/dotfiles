@@ -167,7 +167,7 @@ killall Finder
 ###############################################################################
 
 # Remove Spotlight icon from menu
-plutil -remove 'NSStatusItem Visible Item-0' ~/Library/Preferences/com.apple.Spotlight.plist 
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
