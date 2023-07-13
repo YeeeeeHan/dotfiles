@@ -23,6 +23,7 @@ brew install --cask microsoft-word
 brew install --cask notion
 brew install --cask obsidian
 brew install --cask openvpn-connect
+brew install --cask pgadmin4
 brew install --cask plex
 brew install --cask mongodb-compass
 brew install --cask redisinsight
@@ -51,6 +52,7 @@ brew install jq
 brew install lotyp/formulae/dockutil # For running dotfiles
 brew install ncdu
 brew install mas
+brew install redis
 brew install ripgrep
 brew install syncthing
 brew install tldr
@@ -60,6 +62,7 @@ brew install tree
 brew install typescript
 brew install wget
 brew install yarn
+brew install yt-dlp
 
 # Nodejs set up
 brew install nvm

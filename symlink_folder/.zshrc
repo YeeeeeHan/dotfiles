@@ -130,6 +130,13 @@ export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/
 # == Nodejs related == 
 source $(brew --prefix nvm)/nvm.sh
 
+# == pnpm == 
+export PNPM_HOME="/Users/limyeehan/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # == Custom Aliases ==
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
