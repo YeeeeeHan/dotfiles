@@ -25,6 +25,7 @@ brew install --cask obsidian
 brew install --cask openvpn-connect
 brew install --cask pgadmin4
 brew install --cask plex
+brew install --cask postman
 brew install --cask mongodb-compass
 brew install --cask redisinsight
 brew install --cask slack
