@@ -7,3 +7,5 @@
 [user]
 	name = Lim Yee Han
 	email = limyeehan@gmail.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/

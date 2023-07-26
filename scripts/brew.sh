@@ -69,6 +69,10 @@ brew install nvm
 npm install -g npm # Update npm
 npm install -g pnpm # Install pnpm
 
+# Solidity set up
+brew tap ethereum/ethereum
+brew install solidity
+
 # Mas downloads
 mas install 1352778147 # Bitwarden
 mas install 425264550 # Blackmagic Disk Speed Test
