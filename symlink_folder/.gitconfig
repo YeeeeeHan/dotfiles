@@ -9,3 +9,6 @@
 	email = limyeehan@gmail.com
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[push]
+	# Automatically push the current branch to the remote branch of the same name
+	autoSetupRemote = true
