@@ -74,6 +74,9 @@ npm install -g pnpm # Install pnpm
 # Solidity set up
 brew tap ethereum/ethereum
 brew install solidity
+curl -L https://foundry.paradigm.xyz | zsh
+foundryup
+
 
 # Mas downloads
 mas install 1352778147 # Bitwarden
