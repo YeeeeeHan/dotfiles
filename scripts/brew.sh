@@ -84,3 +84,5 @@ mas install 425264550 # Blackmagic Disk Speed Test
 mas install 1437226581 # Horo timer
 mas install 1564031042 # Omnivore
 mas install 411643860 # Daisy Disk
+mas install 1578860989 # TickerPad
+mas install 1449928544 # Wireless@sgx
