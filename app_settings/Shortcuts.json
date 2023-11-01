@@ -8,7 +8,7 @@
     "shortcut_name": "MakeSmaller"
   },
   {
-    "shortcut_key_binding": "ctrl+home",
+    "shortcut_key_binding": null,
     "shortcut_name": "MoveToPreviousThird"
   },
   {
@@ -48,7 +48,7 @@
     "shortcut_name": "MoveToFullscreen"
   },
   {
-    "shortcut_key_binding": "ctrl+end",
+    "shortcut_key_binding": null,
     "shortcut_name": "MoveToNextThird"
   },
   {
