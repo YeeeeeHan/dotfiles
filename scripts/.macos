@@ -199,18 +199,20 @@ dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Brave Browser.app"
 dockutil --no-restart --add "/Applications/Photos.app"
 dockutil --no-restart --add "/System/Applications/Calendar.app"
-dockutil --no-restart --add "/System/Applications/System Settings.app"
 dockutil --no-restart --add "/System/Applications/Notes.app"
 dockutil --no-restart --add "/System/Applications/Reminders.app"
 dockutil --no-restart --add "/Applications/Spotify.app"
+dockutil --no-restart --add "/Applications/Visual Studio Code.app"
 dockutil --no-restart --add "/Applications/Discord.app"
 dockutil --no-restart --add "/Applications/Telegram Desktop.app"
-dockutil --no-restart --add "/Applications/WhatsApp.app"
 dockutil --no-restart --add "/System/Applications/Messages.app"
+dockutil --no-restart --add "/Applications/Whatsapp.app"
 dockutil --no-restart --add "/System/Applications/Utilities/Terminal.app"
 dockutil --no-restart --add "/Applications/Notion.app"
-dockutil --no-restart --add "/Applications/Visual Studio Code.app"
+dockutil --no-restart --add "/System/Applications/Mail.app"
+dockutil --no-restart --add "/Applications/TradingView.app"
 dockutil --no-restart --add "/Applications/Obsidian.app"
+dockutil --no-restart --add "/Applications/Bitwarden.app"
 
 killall Dock
 
