@@ -72,7 +72,7 @@ brew install nvm
 npm install -g npm # Update npm
 npm install -g pnpm # Install pnpm
 
-# Solidity set up
+# Solidity & foundry set up
 brew tap ethereum/ethereum
 brew install solidity
 curl -L https://foundry.paradigm.xyz | zsh
