@@ -15,6 +15,7 @@ brew install --cask dbeaver-community
 brew install --cask displaylink
 brew install --cask discord
 brew install --cask docker
+brew install --cask figma
 brew install --cask google-chrome
 brew install --cask logi-options-plus
 brew install --cask macmediakeyforwarder
@@ -86,3 +87,4 @@ mas install 1564031042 # Omnivore
 mas install 411643860 # Daisy Disk
 mas install 1578860989 # TickerPad
 mas install 1449928544 # Wireless@sgx
+mas install 1607855871 # Gas price checker
