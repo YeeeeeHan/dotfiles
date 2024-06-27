@@ -48,7 +48,7 @@ brew install --cask zoom
 # Install command line applications
 brew install bat # cat with syntax highlighting
 brew install fzf 
-brew install go
+brew install go@1.23
 brew install htop
 brew install jq
 brew install lotyp/formulae/dockutil # For running dotfiles
@@ -72,9 +72,20 @@ brew install nvm
 npm install -g npm # Update npm
 npm install -g pnpm # Install pnpm
 
+# Python set up
+brew install --cask anaconda
+source activate base
+
+# Java set up
+brew install --cask adoptopenjdk
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+
 # Solidity & foundry set up
 brew tap ethereum/ethereum
 brew install solidity
+brew install solc-select # Switch solc version
+brew unlink solidity
+brew link solc-select
 curl -L https://foundry.paradigm.xyz | zsh
 foundryup
 

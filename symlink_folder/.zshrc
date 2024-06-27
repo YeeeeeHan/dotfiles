@@ -121,14 +121,23 @@ eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
-export GOROOT=$(brew --prefix golang)/libexec
-export PATH=$GOROOT/bin:$PATH
+export GOROOT=$(brew --prefix golang)@1.21/libexec
+# export PATH=$GOROOT/bin:$PATH
+export PATH=$(brew --prefix golang)@1.21/bin:$PATH
+# export GOROOT=$(brew --prefix golang)@1.17/bin:$PATH
 
 # == Vscode related ==
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
 # == Nodejs related == 
 source $(brew --prefix nvm)/nvm.sh
+
+# == Python related ==
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+
+# == Java related ==
+# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# export JAVA_HOME="/opt/homebrew/opt/openjdk"
 
 # == pnpm == 
 export PNPM_HOME="/Users/limyeehan/Library/pnpm"
