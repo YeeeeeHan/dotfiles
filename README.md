@@ -1,5 +1,38 @@
 # Yeehan’s comments
 
+## Setting up SSH keys
+
+1. See if existing SSH keys are present
+
+   ```bash
+   ls -al ~/.ssh
+   ```
+
+2. Generating new SSH keys
+
+   ```bash
+   ssh-keygen -t ed25519 -C "limyeehan@gmail.com"
+   > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM: [Press enter]
+   > Enter passphrase (empty for no passphrase): [Type a passphrase]
+   > Enter same passphrase again: [Type passphrase again]
+   ```
+
+3. Copying SSH keys to clipboard
+
+   ```bash
+   pbcopy < ~/.ssh/id_ed25519.pub
+   ```
+
+4. Paste it into version control SSH settings
+
+5. Test the SSH key
+
+   ```bash
+   ssh -T git@github.com
+   ```
+
+6. Set remote origin
+
 ## Setting up environment
 
 ```bash
@@ -39,39 +72,6 @@ Further settings
    - Betterdisplay
    - Bitwarden
 2. Trackpad expose
-
-## Setting up SSH keys
-
-1. See if existing SSH keys are present
-
-   ```bash
-   ls -al ~/.ssh
-   ```
-
-2. Generating new SSH keys
-
-   ```bash
-   ssh-keygen -t ed25519 -C "limyeehan@gmail.com"
-   > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM: [Press enter]
-   > Enter passphrase (empty for no passphrase): [Type a passphrase]
-   > Enter same passphrase again: [Type passphrase again]
-   ```
-
-3. Copying SSH keys to clipboard
-
-   ```bash
-   pbcopy < ~/.ssh/id_ed25519.pub
-   ```
-
-4. Paste it into version control SSH settings
-
-5. Test the SSH key
-
-   ```bash
-   ssh -T git@github.com
-   ```
-
-6. Set remote origin
    ```bash
    git remote set-url origin git@github.com:username/your-repository.git
    ```
