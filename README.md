@@ -31,50 +31,62 @@
    ssh -T git@github.com
    ```
 
-6. Set remote origin
+6. Set remote origin (if needed)
+   ```bash
+   git remote set-url origin git@github.com:username/your-repository.git
+   ```
 
 ## Setting up environment
+
+1. Install Xcode command line tools
 
 ```bash
 xcode-select --install
 ```
 
+2. Install Rosetta 2
+
+```bash
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+```
+
+3. Clone dotfiles repo
+
 ```bash
 cd ~ && git clone https://github.com//YeeeeeHan/dotfiles
 ```
 
-Symlinks to ~ directory
+4. Symlinks to ~ directory
 
 ```bash
 cd ~/dotfiles && ./install.sh ~
 ```
 
-open new terminal
+5. Open new terminal
 
-install brew and applications
+6. Install brew and applications
+   install brew and applications
 
 ```bash
 cd ~/dotfiles && ./scripts/brew.sh
 ```
 
-Trigger macos settings
+7. Grant terminal full disk access
+8. Trigger macos settings
 
 ```bash
 cd ~/dotfiles && ./scripts/.macos
 ```
 
-Further settings
+9. Further settings
 
-1. Loginitems
-   - DisplayLink Manager
-   - Spectacle
-   - MacMediaKeyForwarder
-   - Betterdisplay
-   - Bitwarden
-2. Trackpad expose
-   ```bash
-   git remote set-url origin git@github.com:username/your-repository.git
-   ```
+- Loginitems
+  - DisplayLink Manager
+  - Spectacle
+  - MacMediaKeyForwarder
+  - Betterdisplay
+  - Bitwarden
+- Trackpad expose
 
 ## Setting up NVM
 
